@@ -17,7 +17,7 @@ public class SubscriptionService {
         String sanitizedName = sanitize(subscription.getName());
         String sanitizedUserType = sanitize(subscription.getUserType());
         String sanitizedCompany = sanitize(subscription.getCompany());
-        String sanitizedApplicationType = sanitize(subscription.getApplicationType());
+        String sanitizedApplicationType = sanitize(subscription.getAppType());
         
         
         // Perform error validation

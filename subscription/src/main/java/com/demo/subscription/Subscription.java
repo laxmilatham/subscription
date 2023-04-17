@@ -21,7 +21,7 @@ public class Subscription {
     private String company;
 
     @NotBlank(message = "Application type is required")
-    private String applicationType;
+    private String appType;
     
     public String getName() {
 		return name;
@@ -55,18 +55,18 @@ public class Subscription {
 		this.company = company;
 	}
 
-	public String getApplicationType() {
-		return applicationType;
+	public String getAppType() {
+		return appType;
 	}
 
-	public void setApplicationType(String applicationType) {
-		this.applicationType = applicationType;
+	public void setAppType(String appType) {
+		this.appType = appType;
 	}
 
 	@Override
 	public String toString() {
 		return "Subscription [name=" + name + ", email=" + email + ", userType=" + userType + ", company=" + company
-				+ ", applicationType=" + applicationType + "]";
+				+ ", applicationType=" + appType + "]";
 	}
 
 }

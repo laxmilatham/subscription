@@ -8,6 +8,11 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+//import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+//import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+//import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+//
+//import java.util.Arrays;
 
 import javax.sql.DataSource;
 
@@ -33,4 +38,26 @@ public class AppConfig {
     DataSource dataSource() {
         return new DataSourceSpy(realDataSource());
     }
+    
+//    @Configuration
+//    @EnableWebSecurity
+//    public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+//
+//        @Override
+//        protected void configure(HttpSecurity http) throws Exception {
+//            http.cors().and().csrf().disable();
+//        }
+//
+//        @Bean
+//        public CorsConfigurationSource corsConfigurationSource() {
+//            CorsConfiguration configuration = new CorsConfiguration();
+//            configuration.setAllowedOrigins(Arrays.asList("*"));
+//            configuration.setAllowedMethods(Arrays.asList("*"));
+//            configuration.setAllowedHeaders(Arrays.asList("*"));
+//            UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+//            source.registerCorsConfiguration("/**", configuration);
+//            return source;
+//        }
+//    }
+
 }
