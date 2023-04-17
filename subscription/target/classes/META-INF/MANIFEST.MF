@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: lathamurarishetty
+Build-Jdk: 14.0.1
+Implementation-Title: Spring Boot Blank Project (from https://github.com
+ /making/spring-boot-blank)
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.demo
+Implementation-Vendor: Pivotal Software, Inc.
+Main-Class: com.demo.subscription.App
+Created-By: Maven Integration for Eclipse
+
