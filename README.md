@@ -2,13 +2,24 @@
 
 BackEnd Response(subscription):
 
-Success
-<img width="844" alt="Screenshot 2023-04-17 at 2 23 10 AM" src="https://user-images.githubusercontent.com/110053012/232443876-f261602f-affc-4c86-ad8a-19efdefa9450.png">
+Success:
+
+<img width="843" alt="Screenshot 2023-04-17 at 3 04 35 AM" src="https://user-images.githubusercontent.com/110053012/232454347-b6a76a91-132b-45f7-a687-1ffed4a9ed12.png">
+
 
 Failure:
-<img width="841" alt="Screenshot 2023-04-17 at 2 24 03 AM" src="https://user-images.githubusercontent.com/110053012/232444360-c2d190bd-6233-474c-be14-51c0591e3a02.png">
+
+<img width="832" alt="Screenshot 2023-04-17 at 3 04 59 AM" src="https://user-images.githubusercontent.com/110053012/232454393-087e1ca4-e846-465d-b72e-07c2c62c84f8.png">
 
 
 FrontEnd Response(subscriptionui):
 
-<img width="521" alt="Screenshot 2023-04-17 at 2 24 44 AM" src="https://user-images.githubusercontent.com/110053012/232444491-310296f8-a437-4694-8377-c8998cf3ab0e.png">
+Success:
+
+<img width="1129" alt="Screenshot 2023-04-17 at 3 06 23 AM" src="https://user-images.githubusercontent.com/110053012/232454450-0f15c2ba-00f2-4758-9552-df680976efba.png">
+
+
+Failure:
+
+<img width="793" alt="Screenshot 2023-04-17 at 3 06 43 AM" src="https://user-images.githubusercontent.com/110053012/232454495-214fbb2d-0c92-4ed0-8ac0-50d8245b118d.png">
+
