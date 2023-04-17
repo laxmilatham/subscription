@@ -6,21 +6,21 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.NotBlank;
 
 public class Subscription {
-	@NotBlank(message = "DTO Name is required")
+	@NotBlank(message = "Name is required")
     private String name;
 
-    @NotBlank(message = "DTO Email is required")
+    @NotBlank(message = "Email is required")
     @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", message = "Invalid email address")
     private String email;
 
-    @NotBlank(message = "DTO User type is required")
+    @NotBlank(message = "User type is required")
     private String userType;
 
-   	@NotBlank(message = "DTO Company is required")
+   	@NotBlank(message = "Company is required")
     @Size(min = 2, max = 50, message = "Company name should be between 2 and 50 characters")
     private String company;
 
-    @NotBlank(message = "DTO Application type is required")
+    @NotBlank(message = "Application type is required")
     private String applicationType;
     
     public String getName() {

@@ -1,5 +1,6 @@
 package com.demo.subscription;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -20,20 +21,16 @@ import javax.validation.Valid;
 public class SubscriptionController {
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-    public ResponseEntity<String> createSubscription(@Valid @RequestBody Subscription request) {
-
+    public ResponseEntity<String> createSubscription(@Valid @RequestBody Subscription request) throws Exception {
+		HttpHeaders headers = new HttpHeaders();
+        headers.add("Access-Control-Allow-Origin", "*"); // set the header
+      
 		System.out.println(request);
         SubscriptionService subscriptionService = new SubscriptionService();
         
-			try {
-				subscriptionService.createSubscription(request);
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			
+		subscriptionService.createSubscription(request);
 		
-
-        // Use sanitized data for further processing
         return ResponseEntity.ok("Subscription created successfully");
     }
 
@@ -44,7 +41,12 @@ public class SubscriptionController {
         return ex.getBindingResult().getFieldError().getDefaultMessage();
     }
 
-    
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(Exception.class)
+    public String handleValidationExceptions(Exception ex) {
+        return ex.getLocalizedMessage();
+    }
+
 }
 
 

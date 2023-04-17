@@ -11,19 +11,15 @@ import org.springframework.stereotype.Service;
 public class SubscriptionService {
     
     public void createSubscription(Subscription subscription) throws Exception {
-    	System.out.println(subscription);
-        // Perform data input sanitization
+    	
+        //sanitization
         String sanitizedEmail = sanitize(subscription.getEmail());
         String sanitizedName = sanitize(subscription.getName());
         String sanitizedUserType = sanitize(subscription.getUserType());
         String sanitizedCompany = sanitize(subscription.getCompany());
         String sanitizedApplicationType = sanitize(subscription.getApplicationType());
         
-        System.out.println(sanitizedEmail);
-        System.out.println(sanitizedName);
-        System.out.println(sanitizedUserType);
-        System.out.println(sanitizedCompany);
-        System.out.println(sanitizedApplicationType);
+        
         // Perform error validation
         if (StringUtils.isBlank(sanitizedEmail)) {
             throw new Exception("Email is required");
@@ -34,7 +30,7 @@ public class SubscriptionService {
         }
         
         if (!isValidUserType(sanitizedUserType)) {
-            throw new Exception("User type is required");
+            throw new Exception("Invalid User Type");
         }
         
         if (StringUtils.isBlank(sanitizedCompany)) {
@@ -42,7 +38,7 @@ public class SubscriptionService {
         }
         
         if (!isValidApplicationType(sanitizedApplicationType)) {
-            throw new Exception("Application type is required");
+            throw new Exception("Invalid Application type");
         }
         
         if (!isValidEmail(sanitizedEmail)) {
@@ -50,7 +46,6 @@ public class SubscriptionService {
         }
         
         // Save the subscription to the database
-        // Example code:
         // subscriptionRepository.save(subscription);
     }
     
@@ -64,8 +59,6 @@ public class SubscriptionService {
     }
     
     private boolean isValidEmail(String email) {
-        // Implement email validation logic
-        // Example code:
         String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
         Pattern pattern = Pattern.compile(emailRegex);
         return pattern.matcher(email).matches();
